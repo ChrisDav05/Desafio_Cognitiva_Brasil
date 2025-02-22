@@ -4,7 +4,7 @@
 
 Este projeto acessa três modelos de linguagem (LLMs) diferentes - Gemini, Llama e Mixtral - para gerar respostas a uma mesma pergunta e compará-las.
 
-🛠️ Tecnologias Utilizadas
+🛠️ Tecnologias Utilizadas:
 
 Node.js
 
@@ -14,23 +14,11 @@ Dotenv (para gerenciamento de variáveis de ambiente)
 
 @google/generative-ai (SDK para Google Gemini)
 
-📂 Estrutura do Projeto
-
-📁 meu-projeto
-├── 📂 config
-│   ├── apiKeys.js
-├── 📂 services
-│   ├── geminiService.js
-│   ├── llamaService.js
-│   ├── mixtralService.js
-├── .env
-├── index.js
-├── package.json
-├── README.md
+LanguageTool API (para análise gramatical)
 
 🔧 Configuração e Execução
 
-1️⃣ Pré-requisitos
+1️⃣ Pré-requisitos:
 
 Antes de executar o projeto, certifique-se de ter:
 
@@ -63,27 +51,42 @@ node index.js
 
 5️⃣ Verificando as Respostas
 
-Se tudo estiver correto, o terminal mostrará as respostas dos três modelos:
+Exemplo de Saída no Console
 
 Consultando Modelos...
 
---------------------------------------------------------------------------------
-Llama retornou: (resposta gerada pelo Llama)
---------------------------------------------------------------------------------
-Gemini retornou: (resposta gerada pelo Gemini)
---------------------------------------------------------------------------------
-Mixtral retornou: (resposta gerada pelo Mixtral)
+---------------- RESPOSTAS ----------------
 
-🛠️ Possíveis Erros e Soluções
+Llama: [resposta gerada]
 
-1️⃣ Erro: MODULE_NOT_FOUND
+Gemini: [resposta gerada]
 
-Execute npm install para garantir que todas as dependências estão instaladas.
+Mixtral: [resposta gerada]
 
-2️⃣ Erro de chave de API inválida
+------------------------------------------------------
+Analisando erros gramaticais...
 
-Verifique se adicionou corretamente as chaves no .env e se estão ativas.
+Llama: 3 erros
 
-3️⃣ Erro undefined nas respostas
+Gemini: 1 erro
 
-Verifique se os serviços estão retornando response.data corretamente.
+Mixtral: 2 erros
+
+RANKING BASEADO EM ERROS GRAMATICAIS:
+
+1️⃣ Gemini - 1 erro
+
+2️⃣ Mixtral - 2 erros
+
+3️⃣ Llama - 3 erros
+
+---------------------------------------------
+PEDINDO QUE OS MODELOS FAÇAM O RANKING...
+
+Ranking segundo Llama: [ranking gerado]
+
+Ranking segundo Gemini: [ranking gerado]
+
+Ranking segundo Mixtral: [ranking gerado]
+
+
